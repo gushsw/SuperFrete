@@ -4,7 +4,7 @@ import boto3
 client = boto3.client('mwaa')
 
 # Parâmetros para o ambiente MWAA
-environment_name = 'meu-ambiente-mwaa'
+environment_name = 'superfrete-mwaa'
 region_name = 'us-east-1'
 dag_s3_path = 's3://meu-bucket-airflow/dags'
 execution_role_arn = 'arn:aws:iam::123456789012:role/MeuMWAARole'
