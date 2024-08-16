@@ -19,5 +19,5 @@ def create_buckets(bucket_names, region_name='us-east-1'):
             logging.error(f'Erro ao criar o bucket {bucket_name}: {e}')
             continue
 
-bucket_names = ['superfrete-datalake-gold', 'superfrete-datalake-silver', 'superfrete-datalake-bronze', 'superfrete-datalake-dados']
+bucket_names = ['superfrete-bucket-gold', 'superfrete-bucket-silver', 'superfrete-bucket-bronze', 'superfrete-bucket-dados']
 create_buckets(bucket_names)
