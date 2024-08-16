@@ -11,10 +11,8 @@ Para que seja possível construir o datalake dentro da aws, você deverá instal
   - AWS CLI, seguindo o passo a passo de acordo com o seu sistema operacional: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
     ATENÇÃO!
-
-    1)Caso o seu ambiente possua validação de usuários federados via AD, você deverá fazer a configuração dos usuários seguindo as instruções neste link:https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html
-
-    2) Após a instalação do AWS CLI, não esqueça de configurar os seus parâmetros de usuário através do comando: aws configure, passando as suas chaves de acesso.Esse procedimento evita que seja necessário passar suas chaves de acesso como constantes dentro dos códigos python de implementação do ambiente. Instruções neste link:https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html
+1)Caso o seu ambiente possua validação de usuários federados via AD, você deverá fazer a configuração dos usuários seguindo as instruções neste link:https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html
+2) Após a instalação do AWS CLI, não esqueça de configurar os seus parâmetros de usuário através do comando: aws configure, passando as suas chaves de acesso.Esse procedimento evita que seja necessário passar suas chaves de acesso como constantes dentro dos códigos python de implementação do ambiente. Instruções neste link:https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html
    
 Após a instalação do python, você deverá instalar as seguintes bibliotecas Python: 
   - boto3: pip install boto3 ou python -m pip install boto3
