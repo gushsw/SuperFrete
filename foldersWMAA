@@ -2,7 +2,7 @@ import boto3
 
 s3 = boto3.client('s3')
 
-bucket_names = ["superfrete-datalake-dados"]
+bucket_names = ["superfrete-bucket-dados"]
 directory_names = ["Engenharia"]
 subfolders_names = ["ApacheAirflow/Dags"]
 
