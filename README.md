@@ -23,4 +23,7 @@ Após a instalação do python, você deverá instalar as seguintes bibliotecas 
   - json: pip install json
     explicação: biblioteca python utilizada para passar os parâmetros de acesso dos usuários e definção dos grupos dentro da aws utilizando json.
 
+  - apache-airflow-providers-amazon==8.16.0: pip install apache-airflow-providers-amazon==8.16.0 ou python -m pip install apache-airflow-providers-amazon==8.16.0
+    explicação: biblioteca python que permitirá que o airflow faça o gerenciamento dos jobs que estarão sendo executados da AWS Glue, como jobs de ETL e Crawlers
+
     
