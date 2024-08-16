@@ -1,11 +1,11 @@
 import boto3
 import json
 
-# Inicializar o cliente IAM
+# Inicializa o cliente IAM
 iam = boto3.client('iam')
 
-# Criar usuário Admin
-iam.create_user(UserName='admin')
+# Cria o usuário Admin
+iam.create_user(UserName='superfrete-admin')
 
 # Política completa para Admin
 admin_policy = {
@@ -19,19 +19,19 @@ admin_policy = {
     ]
 }
 
-# Criar role para Admin e anexar a política
+# Cria role para Admin e anexa a política
 iam.create_role(
-    RoleName='admin-role',
+    RoleName='superfrete-admin-role',
     AssumeRolePolicyDocument=json.dumps(admin_policy)
 )
 
 iam.put_role_policy(
-    RoleName='admin-role',
+    RoleName='superfrete-admin-role',
     PolicyName='AdminAccess',
     PolicyDocument=json.dumps(admin_policy)
 )
 
-# Associar o usuário à role
-iam.add_user_to_group(UserName='admin', GroupName='admin-role')
+# Associa o usuário à role
+iam.add_user_to_group(UserName='superfrete-admin', GroupName='superfrete-admin-role')
 
 print("Usuário e role para Admin criados com sucesso!")
