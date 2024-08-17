@@ -11,7 +11,7 @@ Esses pontos são possíveis através de pipelines orquestrados com Apache Airfl
 Com o objetivo de garantir uma arquitetura simples e otimizada, evitando custos desnecessários, considerando que estamos lidando com um ambiente em nuvem e que serviços desnecessários e mal otimizados podem resultar em custos elevados ao longo do projeto, o que pode comprometer a implementação do DataLake e até mesmo da cultura data-driven. Considerando esses motivos, esta arquitetura consiste no uso dos seguintes serviços AWS:
 
 # Desenho da arquitetura: 
-![image](https://github.com/user-attachments/assets/a14bd37f-8eb9-40bd-8d2c-7fd227cade5a)
+![image](https://github.com/user-attachments/assets/f33d0055-e600-4ad9-9adc-4ec539710201)
 
   1) S3 Buckets: Comumente conhecido como S3 uma sigla para "Simple Storage Service", é um serviço de armazenamento de dados da AWS que se assemelha a um file server, mas com a peculiaridade de ser um serviço serverless. Sendo assim, os buckets S3 são utilizados nesta arquitetura para constituir as três camadas do DataLake da SuperFrete, seguindo a estrutura de medalhão: superfrete-bucket-bronze, superfrete-bucket-silver, superfrete-bucket-gold. Além disso, haverá mais um bucket, que auxiliará como repositório do time e servirá para a configuração do MWAA (Managed Workflows for Apache Airflow)¹.
   ¹O serviço MWAA será explicado mais à frente.
