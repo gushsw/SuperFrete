@@ -23,25 +23,26 @@ Para construir o DataLake dentro da AWS, você deverá instalar os seguintes pr�
 
 1) Instalar o Python em uma versão igual ou superior à 3.11: https://www.python.org/downloads/
 2) Instalar AWS CLI, seguindo o passo a passo de acordo com o seu sistema operacional: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+   
 ATENÇÃO!
  - Caso o seu ambiente possua validação de usuários federados via AD, você deverá configurar os usuários seguindo as instruções neste link: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html.
 Após a instalação do AWS CLI, não esqueça de configurar os seus parâmetros de usuário através do comando aws configure, fornecendo suas chaves de acesso. Esse procedimento evita a necessidade de passar suas chaves de acesso como constantes dentro dos códigos Python de implementação do ambiente. Instruções neste link: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html.
 
 Após a instalação do Python, você deverá instalar as seguintes bibliotecas Python:
-  Considere criar um ambiente virtual para evitar conflito de dependências!!!
+Considere criar um ambiente virtual para evitar conflito de dependências!!!
 
 1) boto3: pip install boto3 ou python -m pip install boto3
 Explicação: biblioteca Python que nada mais é quem um SDK da AWS, simples assim!
 Documentação: **https://pypi.org/project/boto3/**
 
-3) logging: pip install logging ou python -m pip install logging
+2) logging: pip install logging ou python -m pip install logging
 Explicação: biblioteca Python utilizada para alertar falhas de login no ambiente.
 Documentação: **https://pypi.org/project/logging2/**
 
-3)json: pip install json ou python -m pip install json
+3) json: pip install json ou python -m pip install json
 Explicação: biblioteca Python utilizada para passar os parâmetros de acesso dos usuários e definição dos grupos dentro da AWS utilizando JSON.
 Documentação: **https://pypi.org/project/JSON4JSON/**
 
-5) pendulum: pip install pendulum ou python -m pip install pendulum
+4) pendulum: pip install pendulum ou python -m pip install pendulum
 Explicação: biblioteca Python utiulizada para construir constantes temporais com day, week, timezone e etc! Sendo um grande facilitador para criar triggers de execução dentro da amazon pelo airflow.
 Documentação: **https://pypi.org/project/pendulum/**
