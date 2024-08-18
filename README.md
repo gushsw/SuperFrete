@@ -60,3 +60,11 @@ Documentação: https://pypi.org/project/pandas/
 Função: O PyArrow fornece suporte para operações eficientes de leitura e escrita em formatos de dados como Apache Parquet e Arrow.
 Documentação: https://pypi.org/project/pyarrow/
 
+Estas bibliotecas devem ser instaladas para garantir a funcionalidade de todos os scripts python que implementam a arquitetura do DataLake da SuperFrete, assim como possibilita o gerenciamento das dags do airflow assim como a interoperatividade entre o apache airflow e o ambiente em nuvem do DataLake
+
+# Conclusão
+A implementação da arquitetura de Data Lake para o projeto SuperFrete utilizando serviços da AWS é uma solução robusta e eficiente, capaz de atender às demandas de processamento e armazenamento de dados em larga escala. A escolha cuidadosa dos serviços, como Amazon S3, AWS Glue, MWAA e Power BI, é fundamental para garantir uma estrutura flexível, escalável e econômica, capaz de lidar com a variabilidade das cargas de trabalho e a complexidade das operações de dados da startup.
+Ao adotarmos o modelo de camadas Bronze, Silver e Gold no Amazon S3, a arquitetura assegura que os dados sejam gerenciados de forma organizada e eficiente, permitindo uma transição suave desde a ingestão dos dados brutos até sua transformação em insights valiosos para o negócio. A integração com o MWAA proporciona uma orquestração simplificada e segura dos pipelines de dados, enquanto o AWS Glue oferece uma solução escalável para a execução de ETL, equilibrando custos e desempenho.
+Por fim, a escolha do Power BI como ferramenta de visualização complementa essa arquitetura, possibilitando que as equipes de dados e negócios acessem e analisem os dados refinados de maneira intuitiva e colaborativa. Com essa combinação de tecnologias, o Data Lake da SuperFrete está bem posicionado para suportar as necessidades atuais e futuras da empresa, proporcionando uma base sólida para a tomada de decisões estratégicas e a inovação contínua no gerenciamento de dados.
+
+
