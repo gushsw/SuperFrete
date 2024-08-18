@@ -31,24 +31,31 @@ Após a instalação do AWS CLI, não esqueça de configurar os seus parâmetros
 •  boto3: pip install boto3 ou python -m pip install boto3.
 Função: Biblioteca Python que atua como o SDK da AWS. Ela permite interagir com os serviços AWS usando Python.
 Documentação: https://pypi.org/project/boto3/
+
 •  logging: pip install logging ou python -m pip install logging.
 Função: Biblioteca Python utilizada para registrar eventos, sendo especialmente útil para alertar falhas de login e outros eventos no ambiente.
 Documentação: https://pypi.org/project/logging2/
+
 •  json: pip install json ou python -m pip install json.
 Função: Biblioteca Python utilizada para passar os parâmetros de acesso dos usuários e definição dos grupos dentro da AWS utilizando JSON.
 Documentação: https://pypi.org/project/JSON4JSON/
+
 •  pendulum==2.1.2: pip install pendulum==2.1.2 ou python -m pip install pendulum==2.1.2.
 Função: Biblioteca Python utilizada para construir constantes temporais como dias, semanas, fusos horários, etc. É um grande facilitador para criar triggers de execução dentro da AWS pelo Airflow.
 Documentação: https://pypi.org/project/pendulum/
+
 •  apache-airflow: pip install apache-airflow ou python -m pip install apache-airflow.
 Função: Plataforma para autorar, programar e monitorar fluxos de trabalho, como pipelines de dados.
 Documentação: https://pypi.org/project/apache-airflow/
+
 •  apache-airflow-providers-amazon: pip install apache-airflow-providers-amazon ou python -m pip install apache-airflow-providers-amazon.
 Função: Pacote que permite ao Airflow interagir com serviços da AWS, como S3, Glue, EMR, etc.
 Documentação: https://pypi.org/project/apache-airflow-providers-amazon/
+
 •  pandas: pip install pandas ou python -m pip install pandas.
 Função: O Pandas é uma biblioteca essencial para manipulação e análise de dados em estruturas de dados como DataFrames.
 Documentação: https://pypi.org/project/pandas/
+
 •  pyarrow: pip install pyarrow ou python -m pip install pyarrow.
 Função: O PyArrow fornece suporte para operações eficientes de leitura e escrita em formatos de dados como Apache Parquet e Arrow.
 Documentação: https://pypi.org/project/pyarrow/
