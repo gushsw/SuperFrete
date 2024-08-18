@@ -1,0 +1,7 @@
+apache-airflow
+apache-airflow-providers-amazon
+awscli
+logging
+boto3
+json
+pendulum
