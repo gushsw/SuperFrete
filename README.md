@@ -1,14 +1,8 @@
 # DataLake SuperFrete
-Os arquivos deste repositório têm como objetivo implementar uma arquitetura de dados em um DataLake AWS, projetada para suportar um ambiente de Big Data, sendo esta arquitetura capaz de lidar com:
-
-  1) Processamento de dados em larga escala;
-  2) Atualizações diárias em batches de dados;
-  3) Alta disponibilidade de dados para análise.
-     
-Esses pontos são possíveis através de pipelines orquestrados com Apache Airflow.
+Esta documentação tem como objetivo explicar a arquitetura de dados implementada para o projeto SuperFrete, focada na construção de um Data Lake utilizando serviços da AWS. A escolha dessa arquitetura visa garantir alta eficiência no processamento de dados em larga escala, suportar atualizações diárias em batches e assegurar alta disponibilidade de dados para análise. 
 
 # Arquitetura
-Com o objetivo de garantir uma arquitetura simples e otimizada, evitando custos desnecessários, considerando que estamos lidando com um ambiente em nuvem e que serviços desnecessários e mal otimizados podem resultar em custos elevados ao longo do projeto, o que pode comprometer a implementação do DataLake e até mesmo da cultura data-driven. Considerando esses motivos, esta arquitetura consiste no uso dos seguintes serviços AWS:
+A arquitetura do Data Lake foi projetada com o objetivo de ser simples, eficiente e econômica. Considerando que estamos operando em um ambiente de nuvem, onde custos podem se acumular rapidamente, a otimização dos recursos foi uma prioridade. Sendo assim, esta arquitetura se baseia nos seguintes serviços da AWS: 
 
 # Desenho da arquitetura: 
 ![image](https://github.com/user-attachments/assets/f33d0055-e600-4ad9-9adc-4ec539710201)
@@ -34,26 +28,28 @@ Após a instalação do AWS CLI, não esqueça de configurar os seus parâmetros
  ATENÇÃO!
  - Considere criar um ambiente virtual para evitar conflito de dependências!
 
-1) boto3: pip install boto3 ou python -m pip install boto3
-Função: É uma biblioteca Python que nada mais é, na verdade, o SDK da AWS. Ela permite que seja possível interagir com os serviços AWS usando python.
-Documentação: **https://pypi.org/project/boto3/**
+•  boto3: pip install boto3 ou python -m pip install boto3.
+Função: Biblioteca Python que atua como o SDK da AWS. Ela permite interagir com os serviços AWS usando Python.
+Documentação: https://pypi.org/project/boto3/
+•  logging: pip install logging ou python -m pip install logging.
+Função: Biblioteca Python utilizada para registrar eventos, sendo especialmente útil para alertar falhas de login e outros eventos no ambiente.
+Documentação: https://pypi.org/project/logging2/
+•  json: pip install json ou python -m pip install json.
+Função: Biblioteca Python utilizada para passar os parâmetros de acesso dos usuários e definição dos grupos dentro da AWS utilizando JSON.
+Documentação: https://pypi.org/project/JSON4JSON/
+•  pendulum==2.1.2: pip install pendulum==2.1.2 ou python -m pip install pendulum==2.1.2.
+Função: Biblioteca Python utilizada para construir constantes temporais como dias, semanas, fusos horários, etc. É um grande facilitador para criar triggers de execução dentro da AWS pelo Airflow.
+Documentação: https://pypi.org/project/pendulum/
+•  apache-airflow: pip install apache-airflow ou python -m pip install apache-airflow.
+Função: Plataforma para autorar, programar e monitorar fluxos de trabalho, como pipelines de dados.
+Documentação: https://pypi.org/project/apache-airflow/
+•  apache-airflow-providers-amazon: pip install apache-airflow-providers-amazon ou python -m pip install apache-airflow-providers-amazon.
+Função: Pacote que permite ao Airflow interagir com serviços da AWS, como S3, Glue, EMR, etc.
+Documentação: https://pypi.org/project/apache-airflow-providers-amazon/
+•  pandas: pip install pandas ou python -m pip install pandas.
+Função: O Pandas é uma biblioteca essencial para manipulação e análise de dados em estruturas de dados como DataFrames.
+Documentação: https://pypi.org/project/pandas/
+•  pyarrow: pip install pyarrow ou python -m pip install pyarrow.
+Função: O PyArrow fornece suporte para operações eficientes de leitura e escrita em formatos de dados como Apache Parquet e Arrow.
+Documentação: https://pypi.org/project/pyarrow/
 
-2) logging: pip install logging ou python -m pip install logging
-Função: É uma  biblioteca Python utilizada para registrar eventos e é especialmente útil para alertar falhas de login e outros eventos no ambiente.
-Documentação: **https://pypi.org/project/logging2/**
-
-3) json: pip install json ou python -m pip install json
-Função: É uma  biblioteca Python utilizada para passar os parâmetros de acesso dos usuários e definição dos grupos dentro da AWS utilizando JSON.
-Documentação: **https://pypi.org/project/JSON4JSON/**
-
-4) pendulum==2.1.2: pip install pendulum==2.1.2 ou python -m pip install pendulum==2.1.2
-Função: É uma  biblioteca Python utiulizada para construir constantes temporais com day, week, timezone e etc! Sendo um grande facilitador para criar triggers de execução dentro da amazon pelo airflow.
-Documentação: **https://pypi.org/project/pendulum/**
-
-5) apache-airflow: pip install apache-airflow ou python -m pip install apache-airflow
-Função: É uma Plataforma para autorar, programar e monitorar fluxos de trabalho, como pipelines de dados.
-Documentação; **https://pypi.org/project/apache-airflow/**
-
-6) apache-airflow-providers-amazon: pip install apache-airflow-providers-amazon ou python -m pip install apache-airflow-providers-amazon
-Função: É um pacote que permite ao Airflow interagir com serviços da AWS, como S3, Glue, EMR, etc.
-Documentação: **https://pypi.org/project/apache-airflow-providers-amazon/**
