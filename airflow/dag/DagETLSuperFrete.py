@@ -16,7 +16,7 @@ from tests.system.providers.amazon.aws.utils import ENV_ID_KEY, SystemTestContex
 
 # Configurações da DAG
 DAG_ID = 'Exemplo_glue_SF'  # SF = SuperFrete
-ROLE_ARN_KEY = "ROLE_ARN"  # Deve ser configurado com o ARN da role IAM correta que estará disponível para a SuperFrete
+ROLE_ARN_KEY = "ROLE_ARN"  # Deve ser configurado com o ARN da role IAM correta
 
 # Dados e Script de Exemplo
 EX_DATA = """Frete1, 120,20km,0\nFrete2, 135,35km,1\nFrete3, 140,40km,0\n"""
