@@ -28,15 +28,18 @@ ATENÇÃO!
  - Caso o seu ambiente possua validação de usuários federados via AD, você deverá configurar os usuários seguindo as instruções neste link: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html.
 Após a instalação do AWS CLI, não esqueça de configurar os seus parâmetros de usuário através do comando aws configure, fornecendo suas chaves de acesso. Esse procedimento evita a necessidade de passar suas chaves de acesso como constantes dentro dos códigos Python de implementação do ambiente. Instruções neste link: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html.
 
-Após a instalação do Python, você deverá instalar as seguintes bibliotecas Python:
-Considere criar um ambiente virtual para evitar conflito de dependências!!!
+
+# Após a instalação do Python, você deverá instalar as seguintes bibliotecas Python:
+
+ ATENÇÃO!
+ - Considere criar um ambiente virtual para evitar conflito de dependências!
 
 1) boto3: pip install boto3 ou python -m pip install boto3
-Explicação: biblioteca Python que nada mais é quem um SDK da AWS, simples assim!
+Explicação: biblioteca Python que nada mais é, na verdade, o SDK da AWS. Ela permite que seja possível interagir com os serviços AWS usando python.
 Documentação: **https://pypi.org/project/boto3/**
 
 2) logging: pip install logging ou python -m pip install logging
-Explicação: biblioteca Python utilizada para alertar falhas de login no ambiente.
+Explicação: biblioteca Python utilizada para registrar eventos e é especialmente útil para alertar falhas de login e outros eventos no ambiente.
 Documentação: **https://pypi.org/project/logging2/**
 
 3) json: pip install json ou python -m pip install json
@@ -48,5 +51,9 @@ Explicação: biblioteca Python utiulizada para construir constantes temporais c
 Documentação: **https://pypi.org/project/pendulum/**
 
 5) apache-airflow: pip install apache-airflow ou python -m pip install apache-airflow
+Explicação: Plataforma para autorar, programar e monitorar fluxos de trabalho, como pipelines de dados.
+Documentação; **https://pypi.org/project/apache-airflow/**
 
 6) apache-airflow-providers-amazon: pip install apache-airflow-providers-amazon ou python -m pip install apache-airflow-providers-amazon
+Explicação: Pacote que permite ao Airflow interagir com serviços da AWS, como S3, Glue, EMR, etc.
+Documentação: **https://pypi.org/project/apache-airflow-providers-amazon/**
