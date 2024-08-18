@@ -43,6 +43,10 @@ Documentação: **https://pypi.org/project/logging2/**
 Explicação: biblioteca Python utilizada para passar os parâmetros de acesso dos usuários e definição dos grupos dentro da AWS utilizando JSON.
 Documentação: **https://pypi.org/project/JSON4JSON/**
 
-4) pendulum: pip install pendulum ou python -m pip install pendulum
+4) pendulum==2.1.2: pip install pendulum==2.1.2 ou python -m pip install pendulum==2.1.2
 Explicação: biblioteca Python utiulizada para construir constantes temporais com day, week, timezone e etc! Sendo um grande facilitador para criar triggers de execução dentro da amazon pelo airflow.
 Documentação: **https://pypi.org/project/pendulum/**
+
+5) apache-airflow: pip install apache-airflow ou python -m pip install apache-airflow
+
+6) apache-airflow-providers-amazon: pip install apache-airflow-providers-amazon ou python -m pip install apache-airflow-providers-amazon
