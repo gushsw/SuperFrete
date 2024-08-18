@@ -14,12 +14,13 @@ from pyspark.context import SparkContext
 from awsglue.context import GlueContext
 
 glueContext = GlueContext(SparkContext.getOrCreate())
-
 datasource = glueContext.create_dynamic_frame.from_catalog(
-    database='{db_name}', table_name='input')
+    database='{db_name}', table_name='bronze')
 
-output_path = 's3://superfrete-datalake-silver/output'
-datasource.toDF().write.format('parquet').mode("append").save(output_path)
+# Aplicar algumas transformações nos dados para a camada Silver
+transformed_data = datasource.toDF().filter(datasource["Frete"] > 130)
+
+transformed_data.write.format('parquet').mode("append").save('{output_path}')
 """
 
 @task
