@@ -24,13 +24,21 @@ EX_DATA = """Frete1, 120,20km,0\nFrete2, 135,35km,1\nFrete3, 140,40km,0\n"""
 EX_SCRIPT = """
 from pyspark.context import SparkContext
 from awsglue.context import GlueContext
+import boto3 as b3
 
 glueContext = GlueContext(SparkContext.getOrCreate())
-datasource = glueContext.create_dynamic_frame.from_catalog(
-            database='{db_name}', table_name='input')
-print('Existem %s itens na tabela' % datasource.count())
 
-datasource.toDF().write.format('parquet').mode("append").save('s3://{bucket_name}/output')
+s3_client = b3.client('s3')
+bucket_name = 'superfrete-datalake-dados'
+scripts_folder = 'scripts/'
+
+datasource = glueContext.create_dynamic_frame.from_catalog(
+    database='{db_name}', table_name='input')
+
+print(f'Existem {datasource.count()} itens na tabela')
+
+output_path = f's3://{bucket_name}/output'
+datasource.toDF().write.format('parquet').mode("append").save(output_path)
 """
 
 @task
