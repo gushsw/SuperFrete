@@ -35,25 +35,25 @@ Após a instalação do AWS CLI, não esqueça de configurar os seus parâmetros
  - Considere criar um ambiente virtual para evitar conflito de dependências!
 
 1) boto3: pip install boto3 ou python -m pip install boto3
-Explicação: biblioteca Python que nada mais é, na verdade, o SDK da AWS. Ela permite que seja possível interagir com os serviços AWS usando python.
+Função: É uma biblioteca Python que nada mais é, na verdade, o SDK da AWS. Ela permite que seja possível interagir com os serviços AWS usando python.
 Documentação: **https://pypi.org/project/boto3/**
 
 2) logging: pip install logging ou python -m pip install logging
-Explicação: biblioteca Python utilizada para registrar eventos e é especialmente útil para alertar falhas de login e outros eventos no ambiente.
+Função: É uma  biblioteca Python utilizada para registrar eventos e é especialmente útil para alertar falhas de login e outros eventos no ambiente.
 Documentação: **https://pypi.org/project/logging2/**
 
 3) json: pip install json ou python -m pip install json
-Explicação: biblioteca Python utilizada para passar os parâmetros de acesso dos usuários e definição dos grupos dentro da AWS utilizando JSON.
+Função: É uma  biblioteca Python utilizada para passar os parâmetros de acesso dos usuários e definição dos grupos dentro da AWS utilizando JSON.
 Documentação: **https://pypi.org/project/JSON4JSON/**
 
 4) pendulum==2.1.2: pip install pendulum==2.1.2 ou python -m pip install pendulum==2.1.2
-Explicação: biblioteca Python utiulizada para construir constantes temporais com day, week, timezone e etc! Sendo um grande facilitador para criar triggers de execução dentro da amazon pelo airflow.
+Função: É uma  biblioteca Python utiulizada para construir constantes temporais com day, week, timezone e etc! Sendo um grande facilitador para criar triggers de execução dentro da amazon pelo airflow.
 Documentação: **https://pypi.org/project/pendulum/**
 
 5) apache-airflow: pip install apache-airflow ou python -m pip install apache-airflow
-Explicação: Plataforma para autorar, programar e monitorar fluxos de trabalho, como pipelines de dados.
+Função: É uma Plataforma para autorar, programar e monitorar fluxos de trabalho, como pipelines de dados.
 Documentação; **https://pypi.org/project/apache-airflow/**
 
 6) apache-airflow-providers-amazon: pip install apache-airflow-providers-amazon ou python -m pip install apache-airflow-providers-amazon
-Explicação: Pacote que permite ao Airflow interagir com serviços da AWS, como S3, Glue, EMR, etc.
+Função: É um pacote que permite ao Airflow interagir com serviços da AWS, como S3, Glue, EMR, etc.
 Documentação: **https://pypi.org/project/apache-airflow-providers-amazon/**
