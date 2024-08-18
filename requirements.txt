@@ -5,3 +5,5 @@ logging
 boto3
 json
 pendulum
+pyarrow
+pandas
